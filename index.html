@@ -123,13 +123,22 @@
         <div class="container">
             <h2>Get In Touch</h2>
             <p>Have a project in mind? I'd love to hear from you!</p>
-            <form id="contact-form" class="contact-form">
+            
+            <!-- MODIFIED FORM USING FORMSUBMIT -->
+            <form action="https://formsubmit.co/ultimatedigicrafthub@gmail.com" method="POST" class="contact-form">
+                <!-- This hidden input redirects the user to a "thank you" page after submission -->
+                <input type="hidden" name="_next" value="https://your-website.com/thank-you.html">
+                
+                <!-- This disables the reCAPTCHA if you don't want it -->
+                <!-- <input type="hidden" name="_captcha" value="false"> -->
+                <input type="hidden" name="_next" value="thank-you.html">
+
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
                 <input type="email" id="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" id="message" rows="6" placeholder="Your Message" required></textarea>
+                
                 <button type="submit" class="cta-button">Send Message</button>
             </form>
-            <p id="form-message" class="form-message"></p>
         </div>
     </section>
 
